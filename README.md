@@ -34,8 +34,8 @@ Vídeo mostrando os procedimentos básicos para instalar o UTM (Unified Threat M
 
 OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD.
 
-[![Instalação do OPNsense 21.1](http://img.youtube.com/vi/igJku9tHcNo/0.jpg)]( "Instalação do OPNsense 21.1")
+[![Instalação do OPNsense 21.1]()]( "Instalação do OPNsense 21.1")
 
 Link da vídeo aula: 
 
-Documentação da vídeo aula: 
+Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/script/Etapa-001-InstalacaoDoOpnsense-21.1.txt
