@@ -84,15 +84,114 @@ Instalação do OPNsense: https://docs.opnsense.org/manual/install.html
 Terceira etapa: Instalação do OPNsense (localizar a ISO descompactada)
 01. VM OPNsense: Iniciar
 02. Selecione o disco rígido de boot
-	Selecionar um arquivo de disco óptico virtual
+		Selecionar um arquivo de disco óptico virtual
 03. Seletor de Discos Ópticos
-	Acrescentar
-	Selecione o arquivo de disco óptico virtual: OPNsense-21.1-OpenSSL-dvd-amd64.iso
-	<Abrir>
+		Acrescentar
+		Selecione o arquivo de disco óptico virtual: OPNsense-21.1-OpenSSL-dvd-amd64.iso
+		<Abrir>
 04. Not Attached
-	Selecionar: OPNsense-21.1-OpenSSL-dvd-amd64.iso
-	<Escolher>
+		Selecionar: OPNsense-21.1-OpenSSL-dvd-amd64.iso
+		<Escolher>
 <Iniciar>
+
+01. Login: 
+		installer <Enter>
+		opnsense <Enter>
+02. Welcome to the OPNsense 21.1 installer!
+		<OK, let's go.>
+03. Configure Console
+		<Accept these Settings>
+03. Select Task
+		<Guided installation>
+04. Select a Disk
+		<ada0: 16384MB (33554432 512 byte sectors)>
+05. Select install mode
+		<MBR mode>
+06. Set Root Password
+		Root Password: pti@2021
+		Re-type Root Password: pti@2021
+		<Accept and Set Password>
+07. Reboot
+		<Reboot>
 
 Observação: No Oracle VirtualBOX existe uma falha onde o CD-Room do OPNsense não é ejetado 
 no final da Instalação, sendo necessário desmontar o CD-Room e rebotar a máquina virtual.
+
+Endereçamento das Interfaces do OPNsense
+01. Interface WAN: Padrão de configuração via DHCP
+02. Interface LAN: Padrão de configuração de Endereço IP Estático
+03. Endereço IPv4 Padrão da Interface de LAN do pfSense: 192.168.1.1/24
+04. Usuário e senha padrão de acesso ao console: root e senha da instalação: pti@2021
+
+Quarta etapa: Configuração do Endereço de Rede Local e DHCP Server
+01. Setando o Endereçamento IPv4 ou IPV6 das Interfaces de WAN e LAN
+	2) Set interface(s) IP address
+		Enter the number of the interface you wish to configure: 1 <Enter>
+		Configure IPv4 address LAN interface via DHCP? [y/N]: N <Enter>
+		Enter the new LAN IPv4 address.
+			> 172.16.1.254 <Enter>
+		Enter the new LAN IPv4 subnet bit count (1 to 32).
+			> 24 <Enter>
+		For a WAN, enter the new LAN IPv4 upstream gateway address
+		For a LAN, press <Enter> for nome:
+			> <Enter>
+		Configure IPv6 address LAN interface via WAN tracking? [Y/n]? N <Enter>
+		Configure IPv6 address LAN interface via DHCP6? [y/N]: N <Enter>
+		Enter the new LAN IPv6 address.
+			> <Enter>
+		Do you want to enable the DHCP server on LAN? (y/n): y <Enter>
+		Enter the start address of the IPv4 client address range: 172.16.1.100 <Enter>
+		Enter the end address fo the IPv4 client address range: 172.16.1.200 <Enter>
+		Do you want to revert to HTTP as the Web GUI protocol? (y/n): y <Enter>	
+		Restore web GUI access defaults? [y/N]: n <Enter>
+
+Quinta Etapa: Verificação da conexão com a Internet na Interface WAN
+01. Testando a conectividade com a Internet
+	7) Ping host
+		Enter a host name or IP address: google.com <Enter>
+		Press <Enter> to continue.
+
+Sexta etapa: Acessando o OPNsense via Navegador (recomendado utilizar o Navegador Firefox)
+01. Acessar o endereço IPv4: http://172.16.1.254
+		Username: root
+		Password: pti@2021
+		<Login>
+02. System: Wizard: General Setup
+		<Next>
+	System: Wizard: General Information
+		General Information
+			Hostname: ptispo01fw01
+			Domain: pti.intra 
+			Language: English
+			Primary DNS Server: 8.8.8.8
+			Secondary DNS Server: 8.8.4.4
+			Override DNS: Disable: Allow DNS servers to be overridden by DHCP/PPP on WAN
+		Unbound DNS
+			Enable Resolver: Yes
+			Enable DNSSEC Support: No
+			Harden DNSSEC data: No
+		<Next>
+	System: Wizard: Time Server Information
+		Time server hostname: a.st1.ntp.br
+		Timezone: America/Sao_Paulo
+		<Next>
+    System: Wizard: Configure WAN Interface
+		IPv4 Configuration Type: DHCP
+		General configuration
+			MAC Address: default
+			MTU: default
+			MSS: default
+		RFC1918 Networks
+			Block RFC1918 Private Networks: Disable
+		Block bogon networks
+			Block bogon networks: Disable
+		<Next>
+	System: Wizard: Configure LAN Interface
+		LAN IP Address: 172.16.1.254
+		Subnet Mask: 24
+		<Next>
+    System: Wizard: Set Root Password
+		<Next>
+    System: Wizard: Reload Configuration
+		<Reload>
+Click to continue to the dashboard
