@@ -9,21 +9,14 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/09/2024<br>
-Data de atualização: 16/09/2024<br>
-Versão: 0.01<br>
+Data de atualização: 18/09/2024<br>
+Versão: 0.02<br>
 Testado e homologado OPNsense 24.7
 
 Site Oficial do OPNSense: https://opnsense.org/<br>
 Releases do OPNsense: https://docs.opnsense.org/releases.html<br>
 Roadmap do OPNsense: https://opnsense.org/about/road-map/<br>
 Blog Oficial do OPNsense: https://opnsense.org/blog/
-
-Versão 24.7 do OPNsense: https://forum.opnsense.org/index.php?topic=42787.msg212371#msg212371
-
-Começando com o OPNsense: https://opnsense.org/users/get-started/<br>
-Documentação Oficial do OPNsense: https://docs.opnsense.org/
-
-OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD. Foi lançado em Janeiro de 2015
 
 Conteúdo estudado nessa instalação:<br>
 #01_ Download da ISO do OPNsense 24.x do Site Oficial<br>
@@ -32,6 +25,14 @@ Conteúdo estudado nessa instalação:<br>
 #04_ Iniciando a Máquina Virtual do OPNsense 24.x (localizar a ISO)<br>
 #05_ Instalação e Configuração do OPNsense 24.x via CLI (Command Line Interface)<br>
 #06_ Se autenticando no Menu CLI (Command Line Interface) do OPNsense 24.x<br>
+#07_ Acessando o OPNsense via GUI (graphical user interface) via Navegador<br>
+
+Versão 24.7 do OPNsense: https://forum.opnsense.org/index.php?topic=42787.msg212371#msg212371
+
+Começando com o OPNsense: https://opnsense.org/users/get-started/<br>
+Documentação Oficial do OPNsense: https://docs.opnsense.org/
+
+OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD. Foi lançado em Janeiro de 2015
 
 [![Instalação OPNsense](http://img.youtube.com/vi//0.jpg)]( "Instalação OPNsense")
 
@@ -169,8 +170,8 @@ A) login: root
 B) password: opnsense
 
 #OBSERVAÇÃO: DIFERENTE DO PFSENSE, A ISO DO OPNSENSE INICIA VIA LIVE-CD, POR CAUSA DISSO QUE O
-#MENU PADRÃO DE CONFIGURAÇÃO E MOSTRADO, RECOMENDO FAZER AS CONFIGURAÇÕES BÁSICAS DE REDE ANTES
-#DE INICIAR A INSTALAÇÃO NO HARD DISK (HD) 
+#MENU PADRÃO DE CONFIGURAÇÃO É MOSTRADO, RECOMENDO FAZER AS CONFIGURAÇÕES BÁSICAS DE REDE ANTES
+#DE INICIAR A INSTALAÇÃO NO HARD DISK (HD).
 
 #OBSERVAÇÃO: Você também pode utilizar o usuário: installer com a senha: opnsense para iniciar
 #automaticamente a instalação do OPNsense sem passar pelo Menu de Configurações.
@@ -208,10 +209,10 @@ C) Menu: 8) Shell
 
 07. Set Password
   Please select a password for the system management account (root)
-    Password: pti@2018
+    Password: pti@2018 (ALTERE CONFORME A SUA NECESSIDADE)
       <OK>
   Please confirm the password for the system management account (root)
-    Confirm: pti@2018
+    Confirm: pti@2018 (ALTERE CONFORME A SUA NECESSIDADE)
       <OK>
 
 08. Final Configuration
@@ -236,7 +237,7 @@ B) Máquina
 #06_ Se autenticando no Menu CLI (Command Line Interface) do OPNsense 24.x<br>
 ```bash
 A) login: root
-B) password: pti@2018
+B) password: pti@2018 (ALTERE CONFORME A SUA NECESSIDADE)
 
 01. Testando a conexão com a Internet e Rede Local
   7) Ping host
@@ -246,13 +247,17 @@ B) password: pti@2018
   Enter a host name of IP address: google.com <Enter> (SÓ VAI FUNCIONAR DEPOIS DE TERMINAR A CONFIGURAÇÃO)
 ```
 
-#07_ Acessando o OPNsense via GUI (graphical user interface) via Navegador<br>
+#07_ Acessando o OPNsense via GUI (Graphical User Interface) via Navegador<br>
 ```bash
 #OBSERVAÇÃO IMPORTANTE: IGUAL AO PFSENSE, POR PADRÃO O OPNSENSE JÁ VEM HABILITADO O SERVIÇO DE
 #DHCP SERVER NA REDE COM O ESCOPO PADRÃO DA SUB-REDE CLASSE C: 192.168.1.0/24
 
 #verificando o endereço IPv4 obtido pelo OPNsense
 ifconfig
+
+#verificando o endereço IPv4 de Gateway Padrão
+#opção do comando route: -n (numeric addresses)
+route -n
 
 #testando a conexão com o OPNsense
 ping 192.168.1.1
@@ -273,8 +278,8 @@ firefox ou google chrome: https://192.168.1.1
     Hostname: fwvaamonde
     Domain: pti.intra
     Language: English
-    Primary DNS Server: 8.8.8.8
-    Secondary DNS Server: 8.8.4.4
+    Primary DNS Server: 8.8.8.8 (ALTERE CONFORME A SUA NECESSIDADE)
+    Secondary DNS Server: 8.8.4.4 (ALTERE CONFORME A SUA NECESSIDADE)
     Override DNS: (OFF) Allow DNS servers to be overridden by DHCP/PPP on WAN (DISABLE)
   Unbound DNS
     Enable Resolver: (ON) (DEFAULT)
@@ -284,8 +289,8 @@ firefox ou google chrome: https://192.168.1.1
 
 04. System: Wizard: Time Server Information
   Enter the hostname (FQDN) of the time server.
-    Time server hostname: a.st1.ntp.br a.ntp.br
-    Timezone: America/Sao_Paulo
+    Time server hostname: a.st1.ntp.br a.ntp.br (ALTERE CONFORME A SUA NECESSIDADE)
+    Timezone: America/Sao_Paulo (ALTERE CONFORME A SUA NECESSIDADE)
   <Next>
 
 05. System: Wizard: Configure WAN Interface
@@ -303,7 +308,7 @@ firefox ou google chrome: https://192.168.1.1
   <Next>
 
 06. System: Wizard: Configure LAN Interface
-  LAN IP Address: 192.168.1.1
+  LAN IP Address: 192.168.1.1 (ALTERE CONFORME A SUA NECESSIDADE)
   Subnet Mask: 24
   <Next>
 

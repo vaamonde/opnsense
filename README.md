@@ -28,9 +28,19 @@ Microsoft: https://www.microsoft.com/pt-br<br>
 Oracle VirtualBOX: https://www.virtualbox.org/
 
 ## **Playlist do YouTUBE com todos os Vídeos do OPNsense:**
-Link da Playlist: 
+Link da Playlist: https://www.youtube.com/playlist?list=PLozhsZB1lLUO-szSBo9up1dGDrY5Et4e8
 
-## **COMO instalar o UTM/NGFW FIREWALL OPNsense v24.1 no Oracle VirtualBOX**
+## ** 🛰️ Apresentação do Curso GRATUITO de Firewall e Proxy OPNsense 🚀**
+
+Vídeo de apresentação do NOVO Curso de Firewall e Proxy utilizando o OPNSense versão 24.x do Projeto do Bora para Prática. O objetivo desse curso é mostrar os procedimentos básicos para baixar e instalar a versão do OPNSense em Máquina Virtual (ou em máquina física se preferir) no seu computador local, simulando um Servidor On-Premises (Servidor Local), fazer todas as configurações básicas e depois instalar e configurar os principais serviços de rede, com foco para Servidores de Firewall e Proxy utilizando como base os Conceitos do seu antecessor o pfSense-CE
+
+OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD.
+
+[![Apresentação OPNsense](http://img.youtube.com/vi/nvGhh4MKpvI/0.jpg)](https://www.youtube.com/watch?v=nvGhh4MKpvI "Apresentação OPNsense")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=nvGhh4MKpvI
+
+## **COMO instalar o UTM/NGFW FIREWALL OPNsense v24.x no Oracle VirtualBOX**
 
 Vídeo mostrando os procedimentos básicos para instalar o UTM (Unified Threat Management) / NGFW (Next Generation Firewall) Firewall OPNsense v24.1 no Oracle VirtualBOX.
 
