@@ -82,7 +82,7 @@ C) Atualização do VirtualBOX no Linux Mint: https://www.youtube.com/watch?v=DU
 
 Oracle VirtualBOX Gerenciado (versão 7.x ou superior).
 
-01) Ferramentas;	
+01) Ferramentas;
 <Novo>
 
 02) Nome da Máquina Virtual e Sistema Operacional:
