@@ -38,28 +38,34 @@ Documentação Oficial do OPNsense: https://docs.opnsense.org/
 
 OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD. Foi lançado em Janeiro de 2015
 
-[![Instalação OPNsense](http://img.youtube.com/vi//0.jpg)]( "Instalação OPNsense")
+NGFW (Next-Generation Firewall): É uma evolução dos firewalls tradicionais, que oferece proteção em várias camadas de segurança, incluindo inspeção de pacotes, controle de aplicativos e detecção de ameaças avançadas. 
 
-Link da vídeo aula: 
+UTM (Unified Threat Management): É uma solução de segurança mais abrangente que combina várias funcionalidades de segurança em um único dispositivo, oferecendo uma abordagem tudo-em-um para a proteção de redes.
+
+[![Instalação OPNsense](http://img.youtube.com/vi/Udk42noFDj4/0.jpg)](https://www.youtube.com/watch?v=Udk42noFDj4 "Instalação OPNsense")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=Udk42noFDj4
 
 Servidores de DNS recomendados para serem utilizados no OPNsense
-DNS Google..............: Preferencial: 8.8.8.8 - Secundário: 8.8.4.4
-OpenDNS Cisco...........: Preferencial: 208.67.222.222 - Secundário: 208.67.220.220
-OpenDNS FamilyShield....: Preferencial: 208.67.222.123 - Secundário: 208.67.220.123
-CloudFlare..............: Preferencial: 1.1.1.1 - Secundário: 1.0.0.1
-CloudFlare FamilyShield.: Preferencial: 1.1.1.3 - Secundário: 1.0.0.3
-UltraDNS Neustar........: Preferencial: 64.6.64.6 - Secundário: 64.6.65.6 
-UltraDNS Malware........: Preferencial: 156.154.70.2 - Secundário: 156.154.71.2
-UltraDNS FamilyShield...: Preferencial: 156.154.70.3 - Secundário: 156.154.71.3
-Quad9 IBM...............: Preferencial: 9.9.9.9 - Secundário: 149.112.112.112
+
+DNS Google..............: Preferencial: 8.8.8.8 - Secundário: 8.8.4.4<br>
+OpenDNS Cisco...........: Preferencial: 208.67.222.222 - Secundário: 208.67.220.220<br>
+OpenDNS FamilyShield....: Preferencial: 208.67.222.123 - Secundário: 208.67.220.123<br>
+CloudFlare..............: Preferencial: 1.1.1.1 - Secundário: 1.0.0.1<br>
+CloudFlare FamilyShield.: Preferencial: 1.1.1.3 - Secundário: 1.0.0.3<br>
+UltraDNS Neustar........: Preferencial: 64.6.64.6 - Secundário: 64.6.65.6<br> 
+UltraDNS Malware........: Preferencial: 156.154.70.2 - Secundário: 156.154.71.2<br>
+UltraDNS FamilyShield...: Preferencial: 156.154.70.3 - Secundário: 156.154.71.3<br>
+Quad9 IBM...............: Preferencial: 9.9.9.9 - Secundário: 149.112.112.112<br>
 Quad9 Malware...........: Preferencial: 9.9.9.11 - Secundário: 149.112.112.11
 
 Observações das configurações utilizadas nessa documentação
-(DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None
-(DISABLE) = Desabilitado nessa configuração = OFF
-(ENABLE)  = Habilitado nessa configuração = ON
-(REMOVE)  = Removido dessa configuração = Sem valor ou opção
-<***>     = Botão de confirmação ou de aplicar as configurações
+
+A) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None<br>
+B) (DISABLE) = Desabilitado nessa configuração = OFF<br>
+C) (ENABLE)  = Habilitado nessa configuração = ON<br>
+D) (REMOVE)  = Removido dessa configuração = Sem valor ou opção<br>
+E) <***>     = Botão de confirmação ou de aplicar as configurações
 
 Dimensionamento e configuração de hardware: https://docs.opnsense.org/manual/hardware.html<br>
 Instalação e configuração inicial: https://docs.opnsense.org/manual/install.html<br>
@@ -125,7 +131,7 @@ Oracle VirtualBOX Gerenciado (versão 7.x ou superior).
 	Placa-Mãe
 	  Recurso Estendidos
 	    Relógio da máquina retorno hora UTC: OFF (Desabilitar)
-	Processador
+    Processador
       Recursos Estendidos: Habilitar PAE/NX
                            Habilitar VT-x/AMD-v Aninhado 
 
@@ -248,7 +254,7 @@ B) password: pti@2018 (ALTERE CONFORME A SUA NECESSIDADE)
     Enter an option: 7 <Enter>
 
   Enter a host name of IP address: 8.8.8.8 <Enter>
-  Enter a host name of IP address: google.com <Enter> (SÓ VAI FUNCIONAR DEPOIS DE TERMINAR A CONFIGURAÇÃO)
+  Enter a host name of IP address: google.com <Enter>
 ```
 
 #07_ Acessando o OPNsense via GUI (Graphical User Interface) via Navegador<br>
@@ -288,7 +294,7 @@ firefox ou google chrome: https://192.168.1.1
   Unbound DNS
     Enable Resolver: (ON) (DEFAULT)
     Enable DNSSEC Support: (ON) (ENABLE)
-    Harden DNSSEC data: (OFF) (DEFAULT)
+    Harden DNSSEC data: (ON) (ENABLE)
   <Next>
 
 04. System: Wizard: Time Server Information
@@ -306,9 +312,11 @@ firefox ou google chrome: https://192.168.1.1
   DHCP client configuration
     DHCP Hostname: None (DEFAULT)
   RFC1918 Networks
-    Block RFC1918 Private Networks: (OFF) Block private networks from entering via WAN (DISABLE)
+    Block RFC1918 Private Networks: 
+      (OFF) Block private networks from entering via WAN (DISABLE)
   Block bogon networks
-    Block bogon networks: (OFF) Block non-Internet routed networks from entering via WAN (DISABLE)
+    Block bogon networks: 
+      (OFF) Block non-Internet routed networks from entering via WAN (DISABLE)
   <Next>
 
 06. System: Wizard: Configure LAN Interface

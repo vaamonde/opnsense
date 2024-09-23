@@ -35,10 +35,11 @@ Documentação Oficial do OPNsense: https://docs.opnsense.org/
 Link da vídeo aula: 
 
 Observações das configurações utilizadas nessa documentação
-(DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None
-(DISABLE) = Desabilitado nessa configuração = OFF
-(ENABLE)  = Habilitado nessa configuração = ON
-(REMOVE)  = Removido dessa configuração = Sem valor ou opção
+
+(DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None<br>
+(DISABLE) = Desabilitado nessa configuração = OFF<br>
+(ENABLE)  = Habilitado nessa configuração = ON<br>
+(REMOVE)  = Removido dessa configuração = Sem valor ou opção<br>
 <***>     = Botão de confirmação ou de aplicar as configurações
 
 Lobby do OPNsense: https://docs.opnsense.org/lobby.html<br>

@@ -60,6 +60,10 @@ Vídeo mostrando os procedimentos básicos para instalar o UTM (Unified Threat M
 
 OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD.
 
+NGFW (Next-Generation Firewall): É uma evolução dos firewalls tradicionais, que oferece proteção em várias camadas de segurança, incluindo inspeção de pacotes, controle de aplicativos e detecção de ameaças avançadas. 
+
+UTM (Unified Threat Management): É uma solução de segurança mais abrangente que combina várias funcionalidades de segurança em um único dispositivo, oferecendo uma abordagem tudo-em-um para a proteção de redes.
+
 Conteúdo estudado nessa instalação:<br>
 #01_ Download da ISO do OPNsense 24.x do Site Oficial<br>
 #02_ Criação da Máquina Virtual no Oracle VirtualBOX<br>
@@ -69,8 +73,8 @@ Conteúdo estudado nessa instalação:<br>
 #06_ Se autenticando no Menu CLI (Command Line Interface) do OPNsense 24.x<br>
 #07_ Acessando o OPNsense via GUI (graphical user interface) via Navegador<br>
 
-[![Instalação OPNsense](http://img.youtube.com/vi//0.jpg)]( "Instalação OPNsense")
+[![Instalação OPNsense](http://img.youtube.com/vi/Udk42noFDj4/0.jpg)](https://www.youtube.com/watch?v=Udk42noFDj4 "Instalação OPNsense")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=Udk42noFDj4
 
 Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/01-InstalacaoDoOPNsense.md
