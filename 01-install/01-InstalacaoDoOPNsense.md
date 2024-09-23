@@ -47,7 +47,7 @@ UTM (Unified Threat Management): É uma solução de segurança mais abrangente 
 Link da vídeo aula: https://www.youtube.com/watch?v=Udk42noFDj4
 
 Servidores de DNS recomendados para serem utilizados no OPNsense
-
+```bash
 DNS Google..............: Preferencial: 8.8.8.8 - Secundário: 8.8.4.4<br>
 OpenDNS Cisco...........: Preferencial: 208.67.222.222 - Secundário: 208.67.220.220<br>
 OpenDNS FamilyShield....: Preferencial: 208.67.222.123 - Secundário: 208.67.220.123<br>
@@ -58,14 +58,16 @@ UltraDNS Malware........: Preferencial: 156.154.70.2 - Secundário: 156.154.71.2
 UltraDNS FamilyShield...: Preferencial: 156.154.70.3 - Secundário: 156.154.71.3<br>
 Quad9 IBM...............: Preferencial: 9.9.9.9 - Secundário: 149.112.112.112<br>
 Quad9 Malware...........: Preferencial: 9.9.9.11 - Secundário: 149.112.112.11
+```
 
 Observações das configurações utilizadas nessa documentação
-
+```bash
 A) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None<br>
 B) (DISABLE) = Desabilitado nessa configuração = OFF<br>
 C) (ENABLE)  = Habilitado nessa configuração = ON<br>
 D) (REMOVE)  = Removido dessa configuração = Sem valor ou opção<br>
 E) <***>     = Botão de confirmação ou de aplicar as configurações
+```
 
 Dimensionamento e configuração de hardware: https://docs.opnsense.org/manual/hardware.html<br>
 Instalação e configuração inicial: https://docs.opnsense.org/manual/install.html<br>
