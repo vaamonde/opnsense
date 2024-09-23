@@ -48,24 +48,42 @@ Link da vídeo aula: https://www.youtube.com/watch?v=Udk42noFDj4
 
 Servidores de DNS recomendados para serem utilizados no OPNsense
 ```bash
-DNS Google..............: Preferencial: 8.8.8.8 - Secundário: 8.8.4.4<br>
-OpenDNS Cisco...........: Preferencial: 208.67.222.222 - Secundário: 208.67.220.220<br>
-OpenDNS FamilyShield....: Preferencial: 208.67.222.123 - Secundário: 208.67.220.123<br>
-CloudFlare..............: Preferencial: 1.1.1.1 - Secundário: 1.0.0.1<br>
-CloudFlare FamilyShield.: Preferencial: 1.1.1.3 - Secundário: 1.0.0.3<br>
-UltraDNS Neustar........: Preferencial: 64.6.64.6 - Secundário: 64.6.65.6<br> 
-UltraDNS Malware........: Preferencial: 156.154.70.2 - Secundário: 156.154.71.2<br>
-UltraDNS FamilyShield...: Preferencial: 156.154.70.3 - Secundário: 156.154.71.3<br>
-Quad9 IBM...............: Preferencial: 9.9.9.9 - Secundário: 149.112.112.112<br>
-Quad9 Malware...........: Preferencial: 9.9.9.11 - Secundário: 149.112.112.11
+DNS Google IPv4..............: Preferencial: 8.8.8.8 - Secundário: 8.8.4.4
+DNS Google IPv6..............: Preferencial: 2001:4860:4860::8888 - Secundário: 2001:4860:4860::8844
+
+OpenDNS Cisco IPv4...........: Preferencial: 208.67.222.222 - Secundário: 208.67.220.220
+OpenDNS Cisco IPv6...........: Preferencial: 2620:119:35::35 - Secundário: 2620:119:53::53
+
+OpenDNS FamilyShield.........: Preferencial: 208.67.222.123 - Secundário: 208.67.220.123
+
+CloudFlare IPv4..............: Preferencial: 1.1.1.1 - Secundário: 1.0.0.1
+CloudFlare IPv6..............: Preferencial: 2606:4700:4700::1111 - Secundário: 2606:4700:4700::1001
+
+CloudFlare FamilyShield IPv4.: Preferencial: 1.1.1.3 - Secundário: 1.0.0.3
+CloudFlare FamilyShield IPv6.: Preferencial: 2606:4700:4700::1113 - Secundário: 2606:4700:4700::1003
+
+UltraDNS Unfiltered IPv4.....: Preferencial: 64.6.64.6 - Secundário: 64.6.65.6
+UltraDNS Unfiltered IPv4.....: Preferencial: 2620:74:1b::1:1 - Secundário: 2620:74:1c::2:2
+
+UltraDNS Malware IPv4........: Preferencial: 156.154.70.2 - Secundário: 156.154.71.2
+UltraDNS Malware IPv4........: Preferencial: 2610:a1:1018::2 - Secundário: 2610:a1:1019::2
+
+UltraDNS FamilyShield IPv4...: Preferencial: 156.154.70.3 - Secundário: 156.154.71.3
+UltraDNS FamilyShield IPv4...: Preferencial: 2610:a1:1018::3 - Secundário: 2610:a1:1019::3
+
+Quad9 Basic IPv4.............: Preferencial: 9.9.9.9 - Secundário: 149.112.112.112
+Quad9 Basic IPv6.............: Preferencial: 2620:fe::fe - Secundário: 2620:fe::9
+
+Quad9 Malware IPv4...........: Preferencial: 9.9.9.11 - Secundário: 149.112.112.11
+Quad9 Malware IPv6...........: Preferencial: 2620:fe::11 - Secundário: 2620:fe::fe:11
 ```
 
 Observações das configurações utilizadas nessa documentação
 ```bash
-A) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None<br>
-B) (DISABLE) = Desabilitado nessa configuração = OFF<br>
-C) (ENABLE)  = Habilitado nessa configuração = ON<br>
-D) (REMOVE)  = Removido dessa configuração = Sem valor ou opção<br>
+A) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None
+B) (DISABLE) = Desabilitado nessa configuração = OFF
+C) (ENABLE)  = Habilitado nessa configuração = ON
+D) (REMOVE)  = Removido dessa configuração = Sem valor ou opção
 E) <***>     = Botão de confirmação ou de aplicar as configurações
 ```
 
