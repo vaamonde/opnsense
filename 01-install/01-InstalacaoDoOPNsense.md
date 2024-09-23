@@ -9,8 +9,8 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/09/2024<br>
-Data de atualização: 18/09/2024<br>
-Versão: 0.02<br>
+Data de atualização: 23/09/2024<br>
+Versão: 0.03<br>
 Testado e homologado OPNsense 24.7
 
 Conteúdo estudado nessa instalação:<br>
