@@ -52,14 +52,25 @@ OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela D
 
 Link da vídeo aula: https://www.youtube.com/watch?v=nvGhh4MKpvI
 
+# PRIMEIRA ETAPA: INSTALAÇÃO DO OPNSENSE E CONFIGURAÇÕES BÁSICAS
+
 ## **COMO instalar o UTM/NGFW FIREWALL e PROXY OPNsense v24.x no Oracle VirtualBOX**
 
 Vídeo mostrando os procedimentos básicos para instalar o UTM (Unified Threat Management) / NGFW (Next Generation Firewall) Firewall e Proxy OPNsense v24.x no Oracle VirtualBOX.
 
 OPNSense é um firewall de licença BSD baseado no FreeBSD e desenvolvido pela Decisio, uma empresa da Holanda que constrói hardware e vende pacotes do OPNsense embarcado. Ele é um fork do pfSense, e este também é do m0n0wall, e todos estes são baseados no FreeBSD.
 
+Conteúdo estudado nessa instalação:<br>
+#01_ Download da ISO do OPNsense 24.x do Site Oficial<br>
+#02_ Criação da Máquina Virtual no Oracle VirtualBOX<br>
+#03_ Configurações da Máquina Virtual OPNsense<br>
+#04_ Iniciando a Máquina Virtual do OPNsense 24.x (localizar a ISO)<br>
+#05_ Instalação e Configuração do OPNsense 24.x via CLI (Command Line Interface)<br>
+#06_ Se autenticando no Menu CLI (Command Line Interface) do OPNsense 24.x<br>
+#07_ Acessando o OPNsense via GUI (graphical user interface) via Navegador<br>
+
 [![Instalação OPNsense](http://img.youtube.com/vi//0.jpg)]( "Instalação OPNsense")
 
 Link da vídeo aula: 
 
-Documentação da vídeo aula: 
+Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/01-InstalacaoDoOPNsense.md

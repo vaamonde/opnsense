@@ -13,13 +13,17 @@ Data de atualização: 21/09/2024<br>
 Versão: 0.01<br>
 Testado e homologado OPNsense 24.7
 
+Conteúdo estudado nessa instalação:<br>
+#01_ Autenticando no WebGUI (Web Graphical Unit Interface) do OPNsense<br>
+
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO UPDATE DO OPNSENSE SE VOCÊ CONSEGUIU FAZER A ATUALIZAÇÃO COM A SEGUINTE FRASE: Atualização do OPNsense realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #opnsense #firewall #desafiovaamonde #desafioboraparapratica #desafioopnsense #migracaoopnsense
+
 Site Oficial do OPNSense: https://opnsense.org/<br>
 Releases do OPNsense: https://docs.opnsense.org/releases.html<br>
 Roadmap do OPNsense: https://opnsense.org/about/road-map/<br>
 Blog Oficial do OPNsense: https://opnsense.org/blog/
-
-Conteúdo estudado nessa instalação:<br>
-#01_ Autenticando no WebGUI (Web Graphical Unit Interface) do OPNsense<br>
 
 Versão 24.7 do OPNsense: https://forum.opnsense.org/index.php?topic=42787.msg212371#msg212371
 

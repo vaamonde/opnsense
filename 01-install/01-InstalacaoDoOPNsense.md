@@ -13,11 +13,6 @@ Data de atualização: 18/09/2024<br>
 Versão: 0.02<br>
 Testado e homologado OPNsense 24.7
 
-Site Oficial do OPNSense: https://opnsense.org/<br>
-Releases do OPNsense: https://docs.opnsense.org/releases.html<br>
-Roadmap do OPNsense: https://opnsense.org/about/road-map/<br>
-Blog Oficial do OPNsense: https://opnsense.org/blog/
-
 Conteúdo estudado nessa instalação:<br>
 #01_ Download da ISO do OPNsense 24.x do Site Oficial<br>
 #02_ Criação da Máquina Virtual no Oracle VirtualBOX<br>
@@ -26,6 +21,15 @@ Conteúdo estudado nessa instalação:<br>
 #05_ Instalação e Configuração do OPNsense 24.x via CLI (Command Line Interface)<br>
 #06_ Se autenticando no Menu CLI (Command Line Interface) do OPNsense 24.x<br>
 #07_ Acessando o OPNsense via GUI (graphical user interface) via Navegador<br>
+
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO OPNSENSE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do OPNsense realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #opnsense #firewall #desafiovaamonde #desafioboraparapratica #desafioopnsense #migracaoopnsense
+
+Site Oficial do OPNSense: https://opnsense.org/<br>
+Releases do OPNsense: https://docs.opnsense.org/releases.html<br>
+Roadmap do OPNsense: https://opnsense.org/about/road-map/<br>
+Blog Oficial do OPNsense: https://opnsense.org/blog/
 
 Versão 24.7 do OPNsense: https://forum.opnsense.org/index.php?topic=42787.msg212371#msg212371
 

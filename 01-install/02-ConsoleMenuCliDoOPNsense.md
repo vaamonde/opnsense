@@ -13,17 +13,21 @@ Data de atualização: 18/09/2024<br>
 Versão: 0.01<br>
 Testado e homologado OPNsense 24.7
 
-Site Oficial do OPNSense: https://opnsense.org/<br>
-Releases do OPNsense: https://docs.opnsense.org/releases.html<br>
-Roadmap do OPNsense: https://opnsense.org/about/road-map/<br>
-Blog Oficial do OPNsense: https://opnsense.org/blog/
-
 Conteúdo estudado nessa instalação:<br>
 #01_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
 #02_ Conhecendo as Opções do Menu CLI (Command Line Interface) do OPNsense<br>
 #03_ Atribuindo Interface de Rede no Menu CLI (Command Line Interface) do OPNsense<br>
 #04_ Alterando os Endereços IP das Interfaces no Menu CLI (Command Line Interface) do OPNsense<br>
 #05_ Testando a Conectividade no Menu CLI (Command Line Interface) do OPNsense<br>
+
+OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONSOLE DO OPNSENSE SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração via Console do OPNsense realizado com sucesso!!! #BoraParaPrática
+
+#boraparapratica #boraparaprática #vaamonde #robsonvaamonde #procedimentosemti #opnsense #firewall #desafiovaamonde #desafioboraparapratica #desafioopnsense #migracaoopnsense
+
+Site Oficial do OPNSense: https://opnsense.org/<br>
+Releases do OPNsense: https://docs.opnsense.org/releases.html<br>
+Roadmap do OPNsense: https://opnsense.org/about/road-map/<br>
+Blog Oficial do OPNsense: https://opnsense.org/blog/
 
 Versão 24.7 do OPNsense: https://forum.opnsense.org/index.php?topic=42787.msg212371#msg212371
 
