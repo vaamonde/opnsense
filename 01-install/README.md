@@ -50,3 +50,22 @@ Conteúdo estudado nessa instalação:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=Udk42noFDj4
 
 Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/01-InstalacaoDoOPNsense.md
+
+## **CONHECENDO o Modo Console (Menu - CLI) do UTM/NGFW FIREWALL e PROXY OPNsense v24.x no Oracle VirtualBOX**
+
+Vídeo mostrando os procedimentos básicos para utilizar o Modo Console (Terminal) também chamado de Menu CLI (Command Line Interface) do UTM (Unified Threat Management) / NGFW (Next Generation Firewall) Firewall e Proxy OPNsense v24.x no Oracle VirtualBOX.
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
+#02_ Conhecendo as Opções do Menu CLI (Command Line Interface) do OPNsense<br>
+#03_ Atribuindo as Interfaces de Rede do OPNsense via no Menu CLI (Command Line Interface)<br>
+#04_ Alterando os Endereços IP das Interfaces do OPNsense via Menu CLI (Command Line Interface)<br>
+#05_ Testando a Conectividade do OPNsense via Menu CLI (Command Line Interface)<br>
+#06_ Acessando o Shell (Line Command) do OPNsense via Menu CLI (Command Line Interface)<br>
+#07_ Desligando (Power Off) o OPNsense via Menu CLI (Command Line Interface)<br>
+
+[![Menu CLI](http://img.youtube.com/vi/ZGqJeNyAywM/0.jpg)](https://www.youtube.com/watch?v=ZGqJeNyAywM "Menu CLI")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=ZGqJeNyAywM
+
+Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/02-ConsoleMenuCliDoOPNsense.md

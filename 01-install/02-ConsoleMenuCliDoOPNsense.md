@@ -16,10 +16,11 @@ Testado e homologado para a versão do OPNsense 24.7
 Conteúdo estudado nessa instalação:<br>
 #01_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
 #02_ Conhecendo as Opções do Menu CLI (Command Line Interface) do OPNsense<br>
-#03_ Atribuindo Interface de Rede no Menu CLI (Command Line Interface) do OPNsense<br>
-#04_ Alterando os Endereços IP das Interfaces no Menu CLI (Command Line Interface) do OPNsense<br>
-#05_ Testando a Conectividade no Menu CLI (Command Line Interface) do OPNsense<br>
-#06_ Acessando o Shell (Line Command) Menu CLI (Command Line Interface) do OPNsense<br>
+#03_ Atribuindo as Interfaces de Rede do OPNsense via no Menu CLI (Command Line Interface)<br>
+#04_ Alterando os Endereços IP das Interfaces do OPNsense via Menu CLI (Command Line Interface)<br>
+#05_ Testando a Conectividade do OPNsense via Menu CLI (Command Line Interface)<br>
+#06_ Acessando o Shell (Line Command) do OPNsense via Menu CLI (Command Line Interface)<br>
+#07_ Desligando (Power Off) o OPNsense via Menu CLI (Command Line Interface)<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONSOLE DO OPNSENSE SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração via Console do OPNsense realizado com sucesso!!! #BoraParaPrática
 
@@ -35,9 +36,9 @@ Versão 24.7 do OPNsense: https://forum.opnsense.org/index.php?topic=42787.msg21
 Começando com o OPNsense: https://opnsense.org/users/get-started/<br>
 Documentação Oficial do OPNsense: https://docs.opnsense.org/
 
-[![Menu CLI](http://img.youtube.com/vi//0.jpg)]( "Menu CLI")
+[![Menu CLI](http://img.youtube.com/vi/ZGqJeNyAywM/0.jpg)](https://www.youtube.com/watch?v=ZGqJeNyAywM "Menu CLI")
 
-Link da vídeo aula: 
+Link da vídeo aula: https://www.youtube.com/watch?v=ZGqJeNyAywM
 
 Observações das configurações utilizadas nessa documentação
 ```bash
@@ -86,7 +87,7 @@ Opções do Console Menu CLI do OPNsense
 13) Restore a backup - restauração do backup via console
 ```
 
-#03_ Atribuindo Interface de Rede no Menu CLI (Command Line Interface) do OPNsense<br>
+#03_ Atribuindo as Interfaces de Rede do OPNsense via no Menu CLI (Command Line Interface)<br>
 ```bash
 Enter an option: 1 <Enter>
   #opção para configurar o LAGG (Link Aggregation v4)
@@ -98,7 +99,9 @@ Enter an option: 1 <Enter>
   em1 (INTERFACE PADRÃO DA WAN)
 
   Enter the WAN interface name or 'a' for auto-detection: em1 <Enter>
-  Enter the LAN interface name or 'a' for auto-detection: em0 <Enter>
+  Enter the LAN interface name or 'a' for auto-detection: 
+    NOTE: this enables full Firewalling/NAT mode.
+    (or nothing if finished): em0 <Enter>
   Enter the Optional interface 1 name or 'a' for auto-detection: <Enter>
 
   WAN  --> em1
@@ -107,18 +110,18 @@ Enter an option: 1 <Enter>
   Do you want to proceed? [y/N] y <Enter>
 ```
 
-#04_ Alterando os Endereços IP das Interfaces no Menu CLI (Command Line Interface) do OPNsense<br>
+#04_ Alterando os Endereços IP das Interfaces do OPNsense via Menu CLI (Command Line Interface)<br>
 ```bash
 Enter an option: 2 <Enter>
 
 Available interfaces
 
-1 - LAN (em0 - static, track6)
-2 - WAN (em1 - dhcp, dhcp6)
+1 - LAN (em0 - static, track6) (DEFAULT)
+2 - WAN (em1 - dhcp, dhcp6) (DEFAULT)
 
 Enter the number of the interface to configure: 1 <Enter>
 
-Configure IPv4 address LAN interface via DHCP? [y/N] n <Enter>
+  Configure IPv4 address LAN interface via DHCP? [y/N] n <Enter>
   Enter the new LAN IPv4 address. Press <ENTER> for none: 
     > 192.168.1.1 <Enter>
   Enter the new LAN IPv4 subnet bit count (1 to 32):
@@ -138,7 +141,7 @@ Configure IPv4 address LAN interface via DHCP? [y/N] n <Enter>
   Restore web GUI access defaults? [y/N]: n <Enter>
 ```
 
-#05_ Testando a Conectividade no Menu CLI (Command Line Interface) do OPNsense<br>
+#05_ Testando a Conectividade do OPNsense via Menu CLI (Command Line Interface)<br>
 ```bash
 Enter an option: 7 <Enter>
 
@@ -146,10 +149,16 @@ Enter a host name of IP address: 8.8.8.8 <Enter>
 Enter a host name of IP address: google.com <Enter>
 ```
 
-#06_ Acessando o Shell (Line Command) Menu CLI (Command Line Interface) do OPNsense<br>
+#06_ Acessando o Shell (Line Command) do OPNsense via Menu CLI (Command Line Interface)<br>
 ```bash
 Enter an option: 8 <Enter>
 
 root@fwvaamonde~# opensense-version <Enter>
 root@fwvaamonde~# exit <Enter>
+```
+
+#07_ Desligando (Power Off) o OPNsense via Menu CLI (Command Line Interface)<br>
+```bash
+Enter an option: 5 <Enter>
+  The system will halt and power off. Do you want to proceed? [y/N]: y <Enter>
 ```
