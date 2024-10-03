@@ -9,9 +9,9 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 18/09/2024<br>
-Data de atualização: 18/09/2024<br>
-Versão: 0.01<br>
-Testado e homologado OPNsense 24.7
+Data de atualização: 03/10/2024<br>
+Versão: 0.02<br>
+Testado e homologado para a versão do OPNsense 24.7
 
 Conteúdo estudado nessa instalação:<br>
 #01_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
@@ -19,6 +19,7 @@ Conteúdo estudado nessa instalação:<br>
 #03_ Atribuindo Interface de Rede no Menu CLI (Command Line Interface) do OPNsense<br>
 #04_ Alterando os Endereços IP das Interfaces no Menu CLI (Command Line Interface) do OPNsense<br>
 #05_ Testando a Conectividade no Menu CLI (Command Line Interface) do OPNsense<br>
+#06_ Acessando o Shell (Line Command) Menu CLI (Command Line Interface) do OPNsense<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO CONSOLE DO OPNSENSE SE VOCÊ CONSEGUIU FAZER A CONFIGURAÇÃO COM A SEGUINTE FRASE: Configuração via Console do OPNsense realizado com sucesso!!! #BoraParaPrática
 
@@ -39,19 +40,21 @@ Documentação Oficial do OPNsense: https://docs.opnsense.org/
 Link da vídeo aula: 
 
 Observações das configurações utilizadas nessa documentação
-
-(DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None<br>
-(DISABLE) = Desabilitado nessa configuração = OFF<br>
-(ENABLE)  = Habilitado nessa configuração = ON<br>
-(REMOVE)  = Removido dessa configuração = Sem valor ou opção<br>
-<***>     = Botão de confirmação ou de aplicar as configurações
+```bash
+A) (CHANGE)  = Configuração alterada o seu valor = VALUE ou TEXT
+B) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None
+C) (DISABLE) = Desabilitado nessa configuração = OFF
+D) (ENABLE)  = Habilitado nessa configuração = ON
+E) (REMOVE)  = Removido dessa configuração = Sem valor ou opção
+F) <***>     = Botão de confirmação ou de aplicar as configurações
+```
 
 Conexão Serial: https://docs.opnsense.org/manual/how-tos/serial_access.html<br>
 Configurações do Console: https://docs.opnsense.org/manual/install.html
 
 #01_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
 ```bash
-*** fwvaamonde.pti.intra (FQDN DO SERVIDOR): OPNsense 24.7 (VERSÃO DO OPENSENSE) ***
+*** fwvaamonde.pti.intra (FQDN DO SERVIDOR): OPNsense 24.7 (VERSÃO DO OPNSENSE) ***
 
   LAN (em0)   -> v4: 192.168.1.1/24 (ENDEREÇO IPv4 PADRÃO DA INTERFACE LAN)
   WAN (em1)   -> v4/DHCP4: 172.16.1.156/24 (ENDEREÇO IPv4 PADRÃO DINÂMICO VIA DHCP4)
@@ -141,4 +144,12 @@ Enter an option: 7 <Enter>
 
 Enter a host name of IP address: 8.8.8.8 <Enter>
 Enter a host name of IP address: google.com <Enter>
+```
+
+#06_ Acessando o Shell (Line Command) Menu CLI (Command Line Interface) do OPNsense<br>
+```bash
+Enter an option: 8 <Enter>
+
+root@fwvaamonde~# opensense-version <Enter>
+root@fwvaamonde~# exit <Enter>
 ```

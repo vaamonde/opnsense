@@ -9,9 +9,9 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 16/09/2024<br>
-Data de atualização: 23/09/2024<br>
-Versão: 0.03<br>
-Testado e homologado OPNsense 24.7
+Data de atualização: 03/10/2024<br>
+Versão: 0.04<br>
+Testado e homologado para a versão do OPNsense 24.7
 
 Conteúdo estudado nessa instalação:<br>
 #01_ Download da ISO do OPNsense 24.x do Site Oficial<br>
@@ -20,7 +20,7 @@ Conteúdo estudado nessa instalação:<br>
 #04_ Iniciando a Máquina Virtual do OPNsense 24.x (localizar a ISO)<br>
 #05_ Instalação e Configuração do OPNsense 24.x via CLI (Command Line Interface)<br>
 #06_ Se autenticando no Menu CLI (Command Line Interface) do OPNsense 24.x<br>
-#07_ Acessando o OPNsense via GUI (graphical user interface) via Navegador<br>
+#07_ Acessando o OPNsense via WebGUI (Web Graphical user Interface) via Navegador<br>
 
 OBSERVAÇÃO IMPORTANTE: COMENTAR NO VÍDEO DO INSTALAÇÃO DO OPNSENSE SE VOCÊ CONSEGUIU FAZER A INSTALAÇÃO COM A SEGUINTE FRASE: Instalação do OPNsense realizado com sucesso!!! #BoraParaPrática
 
@@ -80,11 +80,12 @@ Quad9 Malware IPv6...........: Preferencial: 2620:fe::11 - Secundário: 2620:fe:
 
 Observações das configurações utilizadas nessa documentação
 ```bash
-A) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None
-B) (DISABLE) = Desabilitado nessa configuração = OFF
-C) (ENABLE)  = Habilitado nessa configuração = ON
-D) (REMOVE)  = Removido dessa configuração = Sem valor ou opção
-E) <***>     = Botão de confirmação ou de aplicar as configurações
+A) (CHANGE)  = Configuração alterada o seu valor = VALUE ou TEXT
+B) (DEFAULT) = Configuração padrão do OPNsense = ON ou OFF, Value OU None
+C) (DISABLE) = Desabilitado nessa configuração = OFF
+D) (ENABLE)  = Habilitado nessa configuração = ON
+E) (REMOVE)  = Removido dessa configuração = Sem valor ou opção
+F) <***>     = Botão de confirmação ou de aplicar as configurações
 ```
 
 Dimensionamento e configuração de hardware: https://docs.opnsense.org/manual/hardware.html<br>
@@ -116,31 +117,31 @@ Oracle VirtualBOX Gerenciado (versão 7.x ou superior).
 <Novo>
 
 02) Nome da Máquina Virtual e Sistema Operacional:
-	Nome: OPNsense (altere conforme a sua necessidade)
-	Pasta (F): #PATH_PADRÃO\OPNsense (altere conforme a sua necessidade)
-	Imagem ISO: <não selecionar>
-	Edição: (sem informação)
-	Tipo: BSD
-	Versão: FreeBSD (64-bit)
+  Nome: OPNsense (altere conforme a sua necessidade)
+  Pasta (F): #PATH_PADRÃO\OPNsense (altere conforme a sua necessidade)
+  Imagem ISO: <não selecionar>
+  Edição: (sem informação)
+  Tipo: BSD
+  Versão: FreeBSD (64-bit)
 <Próximo>
 
 03) Hardware:
-	Memória Base: 4096MB (altere conforme a sua necessidade, mínimo 2048MB)
-	Processadores: 02 CPU (altere conforme a sua necessidade, mínimo 2 CPU)
-	Habilitar EFI (SOs especiais apenas): OFF (Desligado)
+  Memória Base: 4096MB (altere conforme a sua necessidade, mínimo 2048MB)
+  Processadores: 02 CPU (altere conforme a sua necessidade, mínimo 2 CPU)
+  Habilitar EFI (SOs especiais apenas): OFF (Desligado)
 <Próximo>
 
 04) Disco Rígido Virtual:
-	Criar um novo disco rígido virtual agora: ON (Selecionar)
-	  Tamanho do Disco: 16,00GB (alterar conforme a sua necessidade, mínimo 16GB)
-	Pré-alocar Tamanho Total (F): OFF (Desativado) 
+  Criar um novo disco rígido virtual agora: ON (Selecionar)
+    Tamanho do Disco: 16,00GB (alterar conforme a sua necessidade, mínimo 16GB)
+  Pré-alocar Tamanho Total (F): OFF (Desativado)
 <Próximo>
 
 05) Sumário
 <Finalizar>
 ```
 
-#03_ Configurações da Máquina Virtual OPNsense<br>
+#03_ Configurações da Máquina Virtual do OPNsense<br>
 ```bash
 Oracle VirtualBOX Gerenciado (versão 7.x ou superior).
 
@@ -148,33 +149,33 @@ Oracle VirtualBOX Gerenciado (versão 7.x ou superior).
 <Configurações>
 
 02) Sistema
-	Placa-Mãe
-	  Recurso Estendidos
-	    Relógio da máquina retorno hora UTC: OFF (Desabilitar)
+  Placa-Mãe
+    Recurso Estendidos
+      Relógio da máquina retorno hora UTC: OFF (Desabilitar)
     Processador
       Recursos Estendidos: Habilitar PAE/NX
                            Habilitar VT-x/AMD-v Aninhado 
 
 03) Monitor
-	Tela (S)
-	  Memória de Vídeo: 128MB
-	  Recursos Estendidos: Habilitar Aceleração 3D: ON (Habilitar)
+  Tela (S)
+    Memória de Vídeo: 128MB
+    Recursos Estendidos: Habilitar Aceleração 3D: ON (Habilitar)
 
 04) Áudio
-	Habilitar Áudio: OFF (Desabilitar)
+  Habilitar Áudio: OFF (Desabilitar)
 
 05) Rede
-	Adaptador 1 (LAN)
-	  Habilitar Placa de Rede: ON (Habilitar)
-	  Conectado a: Rede Interna
-	  Nome: intnet
-	Adaptador 2 (WAN)
-	  Habilitar Placa de Rede: ON (Habilitar)
-	  Conectado a: Placa em modo Bridge
-	  Nome: enp3s0 (Placa de Rede On-Board)
-	  #OBSERVAÇÃO: VERIFIQUE QUAL PLACA DE REDE VOCÊ ESTÁ USANDO NO SEU EQUIPAMENTO
-	  #QUE ESTÁ CONECTADO NA SUA REDE LOCAL, PODE SER PLACA DE REDE CABEADA OU PLACA
-	  #DE REDE SEM-FIO (RECOMENDO SEMPRE PLACA DE REDE CABEADA, MELHOR DESEMPENHO).
+  Adaptador 1 (LAN)
+    Habilitar Placa de Rede: ON (Habilitar)
+    Conectado a: Rede Interna
+    Nome: intnet
+  Adaptador 2 (WAN)
+    Habilitar Placa de Rede: ON (Habilitar)
+    Conectado a: Placa em modo Bridge
+    Nome: enp3s0 (Placa de Rede On-Board)
+    #OBSERVAÇÃO: VERIFIQUE QUAL PLACA DE REDE VOCÊ ESTÁ USANDO NO SEU EQUIPAMENTO
+    #QUE ESTÁ CONECTADO NA SUA REDE LOCAL, PODE SER PLACA DE REDE CABEADA OU PLACA
+    #DE REDE SEM-FIO (RECOMENDO SEMPRE PLACA DE REDE CABEADA, MELHOR DESEMPENHO).
 <OK>
 ```
 
@@ -186,8 +187,8 @@ Oracle VirtualBOX Gerenciado (versão 7.x ou superior).
 <Iniciar>
 
 02. VirtualBOX VM	
-	DVD: <Outro>
-	LOCALIZAR A IMAGEM DA ISO DO OPNSENSE 24.x
+  DVD: <Outro>
+  LOCALIZAR A IMAGEM DA ISO DO OPNSENSE 24.x
 <Montar e Tentar Novo Boot>
 ```
 
@@ -277,7 +278,7 @@ B) password: pti@2018 (ALTERE CONFORME A SUA NECESSIDADE)
   Enter a host name of IP address: google.com <Enter>
 ```
 
-#07_ Acessando o OPNsense via GUI (Graphical User Interface) via Navegador<br>
+#07_ Acessando o OPNsense via WebGUI (Web Graphical User Interface) via Navegador<br>
 ```bash
 #OBSERVAÇÃO IMPORTANTE: IGUAL AO PFSENSE, POR PADRÃO O OPNSENSE JÁ VEM HABILITADO O SERVIÇO DE
 #DHCP SERVER NA REDE COM O ESCOPO PADRÃO DA SUB-REDE CLASSE C: 192.168.1.0/24
