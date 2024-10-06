@@ -9,7 +9,7 @@ YouTUBE Bora Para Prática: https://www.youtube.com/boraparapratica<br>
 LinkedIn Robson Vaamonde: https://www.linkedin.com/in/robson-vaamonde-0b029028/<br>
 Github Procedimentos em TI: https://github.com/vaamonde<br>
 Data de criação: 21/09/2024<br>
-Data de atualização: 03/10/2024<br>
+Data de atualização: 06/10/2024<br>
 Versão: 0.02<br>
 Testado e homologado para a versão do OPNsense 24.7
 
@@ -86,7 +86,7 @@ firefox ou google chrome: https://192.168.1.1
 02. System
   Firmware
     Status
-      <Check for updates>
+      <Check for updates> (Run and audit)
 
 #atualizando o sistema do OPNsense
 03. System
@@ -99,6 +99,8 @@ firefox ou google chrome: https://192.168.1.1
     #
     #SE ESTIVER UTILIZANDO O VIRTUALBOX RECOMENDO HABILITAR O RECURSO DE: Informações sobre
     #a Sessão PARA MONITORAR O DESEMPENHO DA CARGA DA CPU, REDE, DISCO E SAÍDA DA VM.
+    24.7.5
+      <Close>
     <Update>
       The firewall will reboot directly after this firmware update. <OK>
 
@@ -106,9 +108,41 @@ firefox ou google chrome: https://192.168.1.1
 04. Power
   Reboot
     Are you sure you want to reboot the system? <Yes>
+
+#verificando os pacotes atualizados no OPNsense
+05. System
+  Firmware
+    Changelog
+
+#verificando os Plugins do OPNsense
+06. System
+  Firmware
+    Plugins
+
+#verificando os Pacotes do OPNsense
+07. System
+  Firmware
+    Packages
 ```
 
-#03_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
+#03_ Adicionando mais um Widget (Mini Aplicativo) no Dashboard do OPNsense<br>
+```bash
+#adicionando o mini aplicativo de imagem no Dashboard
+<+ Add Widget>
+  Coluna 04 (Firewall)
+    01) Picture
+<Save>
+
+#configurando o mini aplicativo do imagem do Dashboard
+01. Settings
+  General
+    Picture
+      <Procurar>
+        Selecione a imagem a ser adicionada e clique em: <Abrir>
+  <Save>
+```
+
+#04_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
 ```bash
 *** fwvaamonde.pti.intra (FQDN DO SERVIDOR): OPNsense 24.7 (VERSÃO DO OPNSENSE) ***
 
@@ -123,10 +157,10 @@ login: root
 Password: pti@2018
 ```
 
-#04_ Atualizando o OPNsense via Menu CLI (Command Line Interface) POUCO UTILIZADO<br>
+#05_ Atualizando o OPNsense via Menu CLI (Command Line Interface) POUCO UTILIZADO<br>
 ```bash
 #OBSERVAÇÃO IMPORTANTE: IGUAL AO PROCEDIMENTO VIA WEBGUI, NO MODO CLI O PROCESSO DE 
-#ATUALIZAR TAMBÉM E DEMORADO.
+#ATUALIZAR TAMBÉM É DEMORADO.
 
 Enter an option: 12 <Enter>
   This update requires a reboot

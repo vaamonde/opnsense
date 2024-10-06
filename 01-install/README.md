@@ -69,3 +69,34 @@ Conteúdo estudado nessa instalação:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=ZGqJeNyAywM
 
 Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/02-ConsoleMenuCliDoOPNsense.md
+
+## **CONFIGURANDO o Dashboard (LOBBY) do UTM/NGFW FIREWALL e PROXY OPNsense v24.x no Oracle VirtualBOX**
+
+Vídeo mostrando os procedimentos básicos para configurar o Dashboard (Painel Visual) utilizando o Lobby (Salão) do UTM (Unified Threat Management) / NGFW (Next Generation Firewall) Firewall e Proxy OPNsense v24.x no Oracle VirtualBOX.
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Autenticando no WebGUI (Web Graphical Unit Interface) do OPNsense<br>
+#02_ Conhecendo Lobby e o Dashboard do OPNsense<br>
+#03_ Personalizando o Dashboard do OPNsense<br>
+
+[![Dashboard Lobby](http://img.youtube.com/vi/26EUEjoI3D8/0.jpg)](https://www.youtube.com/watch?v=26EUEjoI3D8 "Dashboard Lobby")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=26EUEjoI3D8
+
+Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/03-LobbyDashboardOPNsense.md
+
+## **ATUALIZANDO (UPGRADE FIRMWARE) o UTM/NGFW FIREWALL e PROXY OPNsense v24.x (24.7.5_3) no Oracle VirtualBOX**
+
+Vídeo mostrando os procedimentos básicos para atualizar a versão do OPNsense 24.7 para o seu último Release 24.7.5_3 do UTM (Unified Threat Management) / NGFW (Next Generation Firewall) Firewall e Proxy OPNsense v24.x no Oracle VirtualBOX.
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Autenticando no WebGUI (Web Graphical Unit Interface) do OPNsense<br>
+#02_ Atualizando o Firmware (Sistema) do OPNsense<br>
+#03_ Autenticando no Menu CLI (Command Line Interface) do OPNsense<br>
+#04_ Atualizando o OPNsense via Menu CLI (Command Line Interface) POUCO UTILIZADO<br>
+
+[![Update Upgrade](http://img.youtube.com/vi/e6LJ_S3U3ss/0.jpg)](https://www.youtube.com/watch?v=e6LJ_S3U3ss "Update Upgrade")
+
+Link da vídeo aula: https://www.youtube.com/watch?v=e6LJ_S3U3ss
+
+Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/04-AtualizandoOPNsense.md
