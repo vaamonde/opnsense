@@ -100,3 +100,19 @@ Conteúdo estudado nessa instalação:<br>
 Link da vídeo aula: https://www.youtube.com/watch?v=e6LJ_S3U3ss
 
 Documentação da vídeo aula: https://github.com/vaamonde/opnsense/blob/main/01-install/04-AtualizandoOPNsense.md
+
+## **CONFIGURAÇÕES Básicas (Settings) do UTM/NGFW FIREWALL e PROXY OPNsense v24.x (24.7.5_3) no Oracle VirtualBOX**
+
+Vídeo mostrando os procedimentos básicos para configurar as opções de Administração, Geral e Variadas/Diversas da versão do OPNsense v24.7.5_3 do UTM (Unified Threat Management) / NGFW (Next Generation Firewall) Firewall e Proxy OPNsense v24.x no Oracle VirtualBOX.
+
+Conteúdo estudado nessa instalação:<br>
+#01_ Autenticando no WebGUI (Web Graphical Unit Interface) do OPNsense<br>
+#02_ Configurações Básicas de Administração do OPNsense<br>
+#03_ Configurações Básicas Gerais do OPNsense<br>
+#04_ Configurações Básicas Variadas/Diversos do OPNsense<br>
+
+[![Settings OPNsense](http://img.youtube.com/vi//0.jpg)]( "Settings OPNsense")
+
+Link da vídeo aula: 
+
+Documentação da vídeo aula:
